@@ -1,0 +1,18 @@
+html
+  head
+    script(type='text/javascript' src='/javascripts/test.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+
+
+  body
+      form(id='login-form', method='POST', action='import')
+        table
+        .form-group
+          label(for='username') Username
+          input(type='text', name='username', class='form-control', id='username', placeholder='Enter username')
+        .form-group
+          label(for='password') Password
+          input(type='password', name='password', class='form-control', id='password', placeholder='Enter password')
+          input(type='submit', name='envoyer', class='form-control', id='envoyer')
