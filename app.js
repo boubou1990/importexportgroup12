@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-//var routes = require('./routes/index');
+// var routes = require('./routes/index');
 var users = require('./routes/users');
 var level = require('level');
 var db = level('./mydb');
@@ -23,15 +23,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.use('/', routes);
+// app.use('/', routes);
 app.use('/users', users);
 
 app.get('/', function(req, res) {
   res.render('form');
 });
 
-app.get('/identification', function(req, res) {
-  res.render('identification');
+app.get('/signin', function(req, res) {
+  res.render('signin');
 });
 
 //module.exports=db;
@@ -56,12 +56,14 @@ db.put(req.body.email,'email');
 res.json (req.body.username, req.body.password,req.body.lastname,req.body.email);
 });
 
-app.get('/signup:id', function(req, res) {
-db.get(req.body.username,'username');
-    if (err) return res.json(500, err);
-    return res.json(200,user);
+    app.post('/signin', function(req, res) {
+db.get(req.body.username, function(err, user) {
+//var username='azerty';
+if (err) return res.json(500, err);
+    return res.json(200,req.body.username);
+ });
   });
-});
+
 
 var server = app.listen(3000,'127.0.0.1', function(req, res){
 

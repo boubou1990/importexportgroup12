@@ -7,7 +7,7 @@ html
 
 
   body
-      form(id='login-form', method='POST', action='/')
+      form(id='login-form', method='POST', action='/signin')
         table
         .form-group
           label(for='username') Username
@@ -16,13 +16,5 @@ html
           label(for='password') Password
           input(type='password', name='password', class='form-control', id='password', placeholder='Enter password')
         .form-group
-          label(for='username') lastname
-          input(type='text', name='lastname', class='form-control', id='lastname', placeholder='Enter lastname')
-        .form-group
-          label(for='username') email
-          input(type='text', name='email', class='form-control', id='email', placeholder='Enter email')
-        .form-group
           label(for='password') envoyer
           input(type='submit', name='envoyer', class='form-control', id='envoyer')
-          input(type='submit',value='Sign Up',data-transition='fade', data-theme='c')
-          a(href='signin') Deja inscrit?

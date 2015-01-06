@@ -1,6 +1,3 @@
-2014/12/13-23:45:58.979 e20 Recovering log #42
-2014/12/13-23:45:58.979 e20 Level-0 table #44: started
-2014/12/13-23:45:59.041 e20 Level-0 table #44: 184 bytes OK
-2014/12/13-23:45:59.163 e20 Delete type=0 #42
-2014/12/13-23:45:59.173 e20 Delete type=3 #40
-2014/12/13-23:45:59.224 1a78 Moved #44 to level-1 184 bytes OK: files[ 3 3 0 0 0 0 0 ]
+2015/01/02-19:09:27.151 fc0 Recovering log #149
+2015/01/02-19:09:27.448 fc0 Delete type=0 #149
+2015/01/02-19:09:27.451 fc0 Delete type=3 #148

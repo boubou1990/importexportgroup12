@@ -41,12 +41,12 @@ properties:"lastname", "firstname", "email", "password"
  /user/signing POST  send username/pwd return user object /val
  /user/signup POST send user prop return user object /val
 
-On peut utiliser minimist
-import must implement the streamReadable class. Here's an example on how to use the import module
+ On peut utiliser minimist
+ import must implement the streamReadable class. Here's an example on how to use the import module
 
-import= require ('./lib/import')
-db =require ('./lib/db');
-client=db('./db');
+ import= require ('./lib/import')
+ db =require ('./lib/db');
+ client=db('./db');
 
 fs.createReadStream('sample!;csv').pipe.import(client)
 
